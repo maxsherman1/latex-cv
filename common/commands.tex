@@ -45,6 +45,17 @@
 	\endonecolentry
 } % new environment for two column entries
 
+\newenvironment{splitcolentry}[2][]{
+	\onecolentry
+	\def\secondColumn{#2}
+	\setcolumnwidth{\fill, 8.75 cm}
+	\begin{paracol}{2}
+	}{
+		\switchcolumn \raggedleft \secondColumn
+	\end{paracol}
+	\endonecolentry
+} % new environment for two column entries
+
 \newenvironment{threecolentry}[3][]{
 	\onecolentry
 	\def\thirdColumn{#3}
