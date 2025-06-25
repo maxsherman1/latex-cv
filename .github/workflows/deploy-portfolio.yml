@@ -1,0 +1,16 @@
+name: Trigger Portfolio Deployment
+
+on:
+  push:
+    paths:
+      - 'outputs/en_software.pdf'  # only trigger if this file changes
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel Deploy Hook
+        run: |
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_QuWhefcPrxRPGSRUWKhcB5VuAPxz/E26Bx3zeow"
