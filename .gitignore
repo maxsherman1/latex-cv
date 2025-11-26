@@ -1,0 +1,25 @@
+# Ignore LaTeX build artifacts globally
+*.aux
+*.log
+*.toc
+*.out
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+
+# Ignore TeXstudio project files
+*.txs*
+
+# Ignore OS/system junk
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignore all PDFs EXCEPT those in outputs/
+*.pdf
+!outputs/*.pdf
